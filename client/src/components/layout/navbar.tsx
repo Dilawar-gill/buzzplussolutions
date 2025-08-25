@@ -17,9 +17,9 @@ export default function Navbar() {
   const isActive = (href: string) => location === href;
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/" data-testid="link-home">
@@ -46,7 +46,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Button 
-                className="bg-brand-blue text-white px-6 py-2 rounded-lg font-medium hover:bg-brand-deep-blue transition-colors"
+                className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
                 data-testid="button-get-started"
                 asChild
               >
@@ -89,7 +89,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Button 
-                className="bg-brand-blue text-white px-6 py-2 rounded-lg font-medium hover:bg-brand-deep-blue transition-colors w-fit"
+                className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors w-fit"
                 data-testid="button-mobile-get-started"
                 asChild
               >
