@@ -84,104 +84,132 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div>
-            <Card className="bg-gradient-to-br from-brand-blue to-brand-deep-blue text-white">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6" data-testid="text-contact-info-title">Get in Touch</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center">
-                    <Mail className="text-brand-orange h-5 w-5 mr-4" />
-                    <div>
-                      <p className="font-semibold" data-testid="text-contact-email-label">Email</p>
-                      <p className="text-blue-100" data-testid="text-contact-email">hello@buzzplussolutions.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <Phone className="text-brand-orange h-5 w-5 mr-4" />
-                    <div>
-                      <p className="font-semibold" data-testid="text-contact-phone-label">Phone</p>
-                      <p className="text-blue-100" data-testid="text-contact-phone">+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="text-brand-orange h-5 w-5 mr-4" />
-                    <div>
-                      <p className="font-semibold" data-testid="text-contact-hours-label">Business Hours</p>
-                      <p className="text-blue-100" data-testid="text-contact-hours">Mon - Fri: 9AM - 6PM</p>
-                    </div>
-                  </div>
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
+          {/* Contact Info - Left Column */}
+          <div className="bg-gradient-to-br from-brand-blue to-brand-deep-blue text-white rounded-2xl p-8 shadow-xl">
+            <h3 className="text-2xl font-bold mb-8" data-testid="text-contact-info-title">Get in Touch</h3>
+            
+            {/* Contact Details */}
+            <div className="space-y-6 mb-8">
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <Mail className="h-5 w-5 text-white" />
                 </div>
+                <div>
+                  <p className="font-semibold text-sm" data-testid="text-contact-email-label">Email</p>
+                  <p className="text-blue-100" data-testid="text-contact-email">hello@buzzplussolutions.com</p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <Phone className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <p className="font-semibold text-sm" data-testid="text-contact-phone-label">Phone</p>
+                  <p className="text-blue-100" data-testid="text-contact-phone">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <Clock className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <p className="font-semibold text-sm" data-testid="text-contact-hours-label">Business Hours</p>
+                  <p className="text-blue-100" data-testid="text-contact-hours">Mon - Fri: 9AM - 6PM</p>
+                </div>
+              </div>
+            </div>
 
-                <div className="mt-8 pt-8 border-t border-blue-400">
-                  <p className="font-semibold mb-4" data-testid="text-contact-social-title">Follow Us</p>
-                  <div className="flex space-x-4">
-                    <a href="#" className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" data-testid="link-contact-facebook">
-                      <i className="fab fa-facebook-f text-white"></i>
-                    </a>
-                    <a href="#" className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" data-testid="link-contact-twitter">
-                      <i className="fab fa-twitter text-white"></i>
-                    </a>
-                    <a href="#" className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" data-testid="link-contact-linkedin">
-                      <i className="fab fa-linkedin-in text-white"></i>
-                    </a>
-                    <a href="#" className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" data-testid="link-contact-instagram">
-                      <i className="fab fa-instagram text-white"></i>
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Social Media Links */}
+            <div className="pt-6 border-t border-blue-400">
+              <p className="font-semibold mb-4 text-sm" data-testid="text-contact-social-title">Follow Us</p>
+              <div className="flex gap-3">
+                <a 
+                  href="#" 
+                  className="w-11 h-11 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-brand-orange hover:scale-110 transition-all duration-300" 
+                  data-testid="link-contact-facebook"
+                >
+                  <i className="fab fa-facebook-f text-white text-sm"></i>
+                </a>
+                <a 
+                  href="#" 
+                  className="w-11 h-11 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-brand-orange hover:scale-110 transition-all duration-300" 
+                  data-testid="link-contact-twitter"
+                >
+                  <i className="fab fa-twitter text-white text-sm"></i>
+                </a>
+                <a 
+                  href="#" 
+                  className="w-11 h-11 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-brand-orange hover:scale-110 transition-all duration-300" 
+                  data-testid="link-contact-linkedin"
+                >
+                  <i className="fab fa-linkedin-in text-white text-sm"></i>
+                </a>
+                <a 
+                  href="#" 
+                  className="w-11 h-11 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-brand-orange hover:scale-110 transition-all duration-300" 
+                  data-testid="link-contact-instagram"
+                >
+                  <i className="fab fa-instagram text-white text-sm"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div>
+          {/* Contact Form - Right Column */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="form-contact">
+              {/* First Name & Last Name Side by Side */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2" data-testid="label-first-name">First Name</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-3" data-testid="label-first-name">First Name</label>
                   <Input
                     {...form.register("firstName")}
                     placeholder="John"
-                    className="w-full"
+                    className="h-12 px-4 border-2 border-gray-200 rounded-lg focus:border-brand-blue focus:ring-0 transition-colors"
                     data-testid="input-first-name"
                   />
                   {form.formState.errors.firstName && (
-                    <p className="text-red-500 text-sm mt-1" data-testid="error-first-name">{form.formState.errors.firstName.message}</p>
+                    <p className="text-red-500 text-sm mt-2" data-testid="error-first-name">{form.formState.errors.firstName.message}</p>
                   )}
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2" data-testid="label-last-name">Last Name</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-3" data-testid="label-last-name">Last Name</label>
                   <Input
                     {...form.register("lastName")}
                     placeholder="Doe"
-                    className="w-full"
+                    className="h-12 px-4 border-2 border-gray-200 rounded-lg focus:border-brand-blue focus:ring-0 transition-colors"
                     data-testid="input-last-name"
                   />
                   {form.formState.errors.lastName && (
-                    <p className="text-red-500 text-sm mt-1" data-testid="error-last-name">{form.formState.errors.lastName.message}</p>
+                    <p className="text-red-500 text-sm mt-2" data-testid="error-last-name">{form.formState.errors.lastName.message}</p>
                   )}
                 </div>
               </div>
+
+              {/* Email Full Width */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2" data-testid="label-email">Email</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-3" data-testid="label-email">Email</label>
                 <Input
                   {...form.register("email")}
                   type="email"
                   placeholder="john@example.com"
-                  className="w-full"
+                  className="h-12 px-4 border-2 border-gray-200 rounded-lg focus:border-brand-blue focus:ring-0 transition-colors"
                   data-testid="input-email"
                 />
                 {form.formState.errors.email && (
-                  <p className="text-red-500 text-sm mt-1" data-testid="error-email">{form.formState.errors.email.message}</p>
+                  <p className="text-red-500 text-sm mt-2" data-testid="error-email">{form.formState.errors.email.message}</p>
                 )}
               </div>
+
+              {/* Service Selection Full Width */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2" data-testid="label-service">Service Interested In</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-3" data-testid="label-service">Service Interested In</label>
                 <Select value={selectedService} onValueChange={(value) => {
                   setSelectedService(value);
                   form.setValue("service", value);
                 }}>
-                  <SelectTrigger className="w-full" data-testid="select-service">
+                  <SelectTrigger className="h-12 px-4 border-2 border-gray-200 rounded-lg focus:border-brand-blue focus:ring-0 transition-colors" data-testid="select-service">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -193,29 +221,40 @@ export default function ContactSection() {
                   </SelectContent>
                 </Select>
                 {form.formState.errors.service && (
-                  <p className="text-red-500 text-sm mt-1" data-testid="error-service">{form.formState.errors.service.message}</p>
+                  <p className="text-red-500 text-sm mt-2" data-testid="error-service">{form.formState.errors.service.message}</p>
                 )}
               </div>
+
+              {/* Message Full Width */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2" data-testid="label-message">Message</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-3" data-testid="label-message">Message</label>
                 <Textarea
                   {...form.register("message")}
-                  rows={4}
-                  placeholder="Tell us about your project..."
-                  className="w-full"
+                  rows={5}
+                  placeholder="Tell us about your project and goals..."
+                  className="px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-blue focus:ring-0 transition-colors resize-none"
                   data-testid="input-message"
                 />
                 {form.formState.errors.message && (
-                  <p className="text-red-500 text-sm mt-1" data-testid="error-message">{form.formState.errors.message.message}</p>
+                  <p className="text-red-500 text-sm mt-2" data-testid="error-message">{form.formState.errors.message.message}</p>
                 )}
               </div>
+
+              {/* Submit Button */}
               <Button 
                 type="submit" 
                 disabled={contactMutation.isPending}
-                className="w-full bg-brand-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-brand-deep-blue transition-colors"
+                className="w-full h-14 bg-brand-blue text-white font-bold rounded-lg hover:bg-brand-deep-blue hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
                 data-testid="button-contact-submit"
               >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
+                {contactMutation.isPending ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                    Sending...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
               </Button>
             </form>
           </div>
